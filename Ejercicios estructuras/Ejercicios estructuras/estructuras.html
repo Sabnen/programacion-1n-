@@ -1,0 +1,128 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Relaciones entre estructuras</title>
+    <script>
+        var metamor = {
+            conjuro: "Metamorphosis puche",
+            efecto: "transformación en cualquier cosa"
+        }
+
+        var destruccion = {
+            conjuro: "Destruccion estelar",
+            efecto: "Destruye todo lo que este a su paso"
+        }
+
+        var curar = {
+            conjuro: "Curacion del espiritu",
+            efecto: "Cura a sus aliados"
+        }
+        var arcBrillante = {
+            conjuro: "Arco brillante",
+            efecto: "El arco dorado acaba con su objetivo"
+        }
+
+        var lunaNova = {
+            nombre: "Luna Nova",
+            emblema: "Luna"
+        }
+
+        var espirit = {
+            nombre: "Spirits",
+            emblema: "Laguna"
+        }
+
+        var disorder = {
+            nombre: "La leyendas",
+            emblema: "Sol"
+        }
+
+
+        var diana = {
+            nombre: "Diana",
+            apellido: "Cavendish",
+            faccion: lunaNova,
+            hechizoPreferido: arcBrillante
+        }
+
+        var akko = {
+            nombre: "Atsuko",
+            apellido: "Kagari",
+            faccion: lunaNova,
+            hechizoPreferido: metamor
+        }
+
+        var discord = {
+            nombre: "Discord",
+            apellido: "Luther",
+            faccion: disorder,
+            hechizoPreferido: destruccion
+        }
+
+        var lotte = {
+            nombre: "Lotte",
+            apellido: "Canterlot",
+            faccion: espirit,
+            hechizoPreferido: curar
+        }
+
+        console.log(akko.nombre + " " + akko.apellido + "pertenece a la facción " + akko.faccion.nombre +
+            " cuyo emblema es " + akko.faccion.emblema + " y su hechizo preferido es " + akko.hechizoPreferido.conjuro);
+
+        console.log(diana.nombre + " " + diana.apellido + "pertenece a la facción " + diana.faccion.nombre +
+            " cuyo emblema es " + diana.faccion.emblema + " y su hechizo preferido es " + diana.hechizoPreferido.conjuro);
+
+        console.log(lotte.nombre + " " + lotte.apellido + "pertenece a la facción " + lotte.faccion.nombre +
+            " cuyo emblema es " + lotte.faccion.emblema + " y su hechizo preferido es " + lotte.hechizoPreferido.conjuro);
+
+        console.log(discord.nombre + " " + discord.apellido + "pertenece a la facción " + discord.faccion.nombre +
+            " cuyo emblema es " + discord.faccion.emblema + " y su hechizo preferido es " + discord.hechizoPreferido.conjuro);
+
+        //declaro una funcion que reciben los psjs y lo presenta en la consola
+
+        function presentarBruja(bruja) {
+            console.log(bruja.nombre + " " + bruja.apellido);
+
+        }
+
+        function presentarHechizo(hechizo) {
+            console.log(hechizo.conjuro + " ese hechizo hace que " + hechizo.efecto);
+        }
+        function presentarFaccion(faccion, emblema) {
+            console.log(faccion.nombre + " La facción tiene como emblema a  " + faccion.emblema);
+
+
+        }
+
+
+
+        //Invoco la funcion para presentar a los psjs
+
+        presentarBruja(lotte)
+        presentarBruja(discord);
+        presentarBruja(akko);
+        presentarBruja(diana);
+
+        //Invoco la funcion para presentar hechizo
+        presentarHechizo(metamor);
+        presentarHechizo(arcBrillante);
+        presentarHechizo(destruccion);
+        presentarHechizo(curar);
+
+        //Invoco la funcion para presentar facciones
+        presentarFaccion(lunaNova);
+        presentarFaccion(disorder);
+        presentarFaccion(espirit);
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

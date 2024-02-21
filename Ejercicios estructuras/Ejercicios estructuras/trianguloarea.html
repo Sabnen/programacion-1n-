@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Primera Práctica JS</title>
+    <script>
+        //Aquí va el código JavaScript
+        console.log("Hola Mundo, desde JS!");
+
+        var a = 4;
+        var b = 10;
+        var result = a * b;
+        console.log("El resultado es:" + result);
+
+        var c = 7;
+        var d = 2;
+        var resultresta = c - d;
+        console.log("El resultado es:" + resultresta);
+
+        var e = 8;
+        var f = 9;
+        var resultsuma = e + f;
+        console.log("El resultado es:" + resultsuma);
+
+        var g = 6;
+        var h = 3;
+        var resultdivisio = g / h;
+        console.log("El resultado es:" + resultdivisio);
+
+        //Declaro la funcion para calcular el
+        //area del triangulo
+        function calcAreatriangulo(base, altura) {
+        var area = (base * altura) / 2;
+            return area;
+        }
+        // La funcion para calcular el area,
+        //con los parametros 1.8 y 0.9
+        var areatrianchico = calcAreatriangulo(1.8, 0.90);
+        console.log("El área del triangulo chico es:"
+            + areatrianchico);
+
+        // La funcion para calcular el area,
+        //con los parametros 587 y 790
+        var areatriangrande= calcAreatriangulo(587, 790);
+        console.log("El área del triangulo grande es:"
+            + areatriangrande);
+
+        // La funcion para calcular el area,
+        //con los parametros 200 y 260
+        var areatrianmedia = calcAreatriangulo(200, 260);
+        console.log("El área del triangulo chico es:"
+            + areatrianmedia);
+
+        // Esta funcion la voy a asociar al
+        //boton para calcular el area del triangulo
+        function ejecutarCalcArea() {
+            var base = campoBase.value;
+            var altura = campoAltura.value;
+            var result = calcAreatriangulo(base, altura);
+
+            alert(result);
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Primera Práctica</h1>
+    <p>
+        En esta práctica, vamos a ver como funciona JS dentro del navegador
+    </p>
+    <h2>Área del triangulo </h2>
+    <p>
+        Introduce las dimensiones del triangulo y presiona el botón para calcular su área
+    </p>
+
+    Base <input type="number" id="campoBase" />
+    Altura <input type="number" id="campoAltura" />
+    <button onclick="ejecutarCalcArea()">Calcular Área</button>
+
+</body>
+</html>

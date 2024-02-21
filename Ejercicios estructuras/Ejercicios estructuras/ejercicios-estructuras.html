@@ -1,0 +1,140 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio de Estructuras</title>
+    <script>
+        //Declaro una función
+        function describirPersona(persona) {
+            console.log(persona.nombre + " " + persona.apellido);
+            console.log("tiene " + persona.edad + " años y mide " + persona.altura);
+        }
+
+        //Declaro una var con la estructura
+        var pepito = {
+            nombre: "José Juan",
+            apellido: "Pérez López",
+            edad: 54,
+            altura:1.9
+        };
+
+        var Claudia = {
+            nombre: "Claudia",
+            apellido: "Contreras",
+            edad: 31,
+            altura: 1.74
+        }
+
+        //La función envia la estructura
+        describirPersona(pepito);
+        describirPersona(Claudia);
+
+        //Declaro una función
+        function describirPelicula(pelicula) {
+            console.log(pelicula.peliculanombre);
+            console.log("Salió en el año " + pelicula.aniosalida);
+            console.log("Tiene de director a " + pelicula.director);
+            console.log("Se estreno en el país de " + pelicula.paisestre + " y su costo de producción fue de " + pelicula.costoprodu);
+        }
+
+
+        //Declaro una var con la estructura
+        var evangelion = {
+           peliculanombre:"Evangelion",
+           aniosalida: 2007,
+           director:"Hideki Ano",
+           paisestre: "Japón",
+           costoprodu: "3.26 millones"
+        };
+
+        var Ponyo = {
+            peliculanombre: "Ponyo",
+            aniosalida: 2008,
+            director: "Hayao Miyazaki",
+            paisestre: "Japón",
+            costoprodu: "3.4 millones"
+        }
+
+        //La función envia la estructura
+        describirPelicula(evangelion);
+        describirPelicula(Ponyo);
+
+
+        //Declaro una función
+        function describirCelular(celular) {
+            console.log(celular.celularnombre);
+            console.log("Salió en el año " + celular.aniosalidacel);
+            console.log("Batería de " + celular.bateria);
+            console.log("Su número de MP son " + celular.megapx +
+                " y su almacenamiento es de " + celular.almacenami);
+        }
+
+
+        //Declaro una var con la estructura
+        var POCOX3 = {
+            celularnombre: "POCO X3",
+            aniosalidacel:2020,
+            bateria: "5.160 mAh + 33W mAh",
+            megapx: "64 MP",
+            almacenami:"128 GB"
+        };
+
+        var S21 = {
+            celularnombre: "Samsung Galaxy S21",
+            aniosalidacel: 2021,
+            bateria: "4.000 mAh",
+            megapx: "64 MP",
+            almacenami: "256 GB"
+        }
+
+        //La función envia la estructura
+        describirCelular(POCOX3);
+        describirCelular(S21);
+
+
+        //Declaro una función
+        function describirCancion(cancion) {
+            console.log(cancion.cancionnombre);
+            console.log("Salió en el año " + cancion.aniosalidacancion);
+            console.log("Su autor es " + cancion.autor);
+            console.log("Su género es " + cancion.genero +
+                " y su número de reproducciones es " + cancion.reproducci);
+        }
+
+
+        //Declaro una var con la estructura
+        var mykindofwom = {
+            cancionnombre: "My kind of woman",
+            aniosalidacancion: 2012,
+            autor: "Mac DeMarco",
+            genero: "pop rock",
+            reproducci:"583 millones",
+        };
+
+        var ditto = {
+            cancionnombre: "Ditto",
+            aniosalidacancion: 2022,
+            autor: "New Jeans",
+            genero: "kpop",
+            reproducci: "536 millones",
+        }
+
+        //La función envia la estructura
+        describirCancion(mykindofwom);
+        describirCancion(ditto);
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

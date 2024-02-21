@@ -1,0 +1,59 @@
+﻿﻿<
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tarea 1 IMC JS</title>
+    <script>
+
+        function calcimc(peso, altura) {
+            var imc =((altura*altura)/peso)
+            return imc;
+
+        }
+
+        // La funcion para calcular si es sobrepeso
+        //es con los parametros es entre 25 y 29.9
+        var sobrepesoimc = calcimc(25, 29.9);
+        console.log("El imc de la persona si tiene sobrepeso es:"
+            + sobrepesoimc);
+
+        // La funcion para calcular si es obesidad es
+        //con los parametros 30>
+        var obesidadimc = calcimc(30, 60);
+        console.log("El imc de la persona si tiene obesidad es:" +obesidadimc);
+
+        // La funcion para calcular si es saludable es
+        //con los parametros 18.5 y 24.9
+        var saludableimc = calcimc(18.5, 24.9);
+        console.log("El imc de la persona si es saludable es:" +saludableimc);
+
+        // Esta funcion la voy a asociar al
+        //boton para calcular el imc
+        function ejecutarCalcimc() {
+            var peso = campoPeso.value;
+            var altura = campoAltura.value;
+            var result = calcimc(peso, altura);
+
+            alert(result);
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>IMC</h1>
+    <p>
+        En esta tarea veremos el IMC
+    </p>
+    <h2>Calculo de IMC</h2>
+    <p>
+        Introduce tu peso y altura y presiona el botón para calcularlo
+    </p>
+
+    peso <input type="number" id="campoPeso" />
+    altura <input type="number" id="campoAltura" />
+    <button onclick="ejecutarCalcimc()">Calcular IMC</button>
+
+</body>
+</html>

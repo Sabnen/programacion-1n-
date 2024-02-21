@@ -1,0 +1,94 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cuenta banco (estructura) </title>
+    <script>
+        var miCuenta = {
+            propietario: "Maria Méndez",
+            saldo: 58790.10,
+            banco: "Banco de Bravos",
+            Nip: 37802
+        }
+
+        function retirarDinero() {
+            var monto = campoMonto.value;
+            var nip = campoNip.value;
+            if (nipcorrec = (nip)) {
+                //el nip si es correspondiente
+
+                if (monto > miCuenta.saldo) {
+                    //el resultado es insufiente
+                    panelResultado.innerHTML =
+                        "No tienes saldo suficiente para retirar";
+
+                } else {//el saldo si es suficiente
+                    miCuenta.saldo -= monto;
+                    panelResultado.innerHTML =
+                        "Retiraste $" + monto
+                        + ". Te queda $" + miCuenta.saldo;
+                }
+
+            } else {
+                (campoNip !== nip.Nip)
+                //no es el nip correspondiente
+                panelResultado.innerHTML =
+                    "No es el nip correcto";
+            }
+        }
+
+        function depositarDinero() {
+            var monto = +campoMonto.value;
+            var nip = campoNip.value;
+            if
+                (nipcorrec = (nip)) {
+                //el nip si es correspondiente
+                miCuenta.saldo += monto;
+                panelResultado.innerHTML =
+                    miCuenta.propietario + " "
+                    + "Depositaste $ " + monto + ", En total es $ " + miCuenta.saldo;
+            }
+            else {
+                (campoNip !== nip.Nip)
+                //no es el nip correspondiente
+                panelResultado.innerHTML =
+                    "No es el nip correcto";
+            }
+        }
+
+        function consultarCuenta() {
+
+            var nip = campoNip.value;
+            if
+                (nipcorrec = (nip)) {
+                //el nip si es correspondiente
+                panelResultado.innerHTML =
+                    miCuenta.propietario + ","
+                    + "Tienes $ " + miCuenta.saldo
+                    + "en el banco " + miCuenta.banco;
+            }
+
+            else {(campoNip !== nip.Nip)
+                //no es el nip correspondiente
+                panelResultado.innerHTML =
+                    "No es el nip correcto";
+            }
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1>Cuenta bancaria</h1>
+    Monto: <input type="number" id="campoMonto" /><br />
+    Nip: <input type="number" id="campoNip" /><br />
+    <button onclick="retirarDinero()">Retirar</button><br />
+    <button onclick="consultarCuenta()">Consultar</button><br />
+    <button onclick="depositarDinero()">Depositar</button><br />
+    <div id="panelResultado"></div>
+
+</body>
+</html>

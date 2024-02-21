@@ -1,0 +1,73 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Celsius y fahrenheit</title>
+
+    <script>
+        //Funcion para declarar la convercion de celsius
+        //a fahrenheit
+        function calcfahren(tempcelsius) {
+            var fahren = (1.8 * tempcelsius + 32);
+            return fahren
+
+        }
+
+        // Funcion asociada para el boton de
+        //calcular celsius a fahrenheit
+        function ejecutarCalcfaren() {
+            var tempcelsius = campoCelsius.value;
+            var result = calcfahren(tempcelsius);
+
+            alert(result);
+
+        }
+
+        //Funcion para declarar la convercion de fahrenheit
+        //a celsius
+        function celsius(tempfahren) {
+            var celsius = ((tempfahren - 32)*0.555);
+            return celsius
+
+        }
+
+        // Funcion asociada para el boton de
+        //calcular fahrenheit a celsius
+        function ejecutarCalcelsius() {
+            var tempfahren = campoFahren.value;
+            var resultcelsi = calcfahren(tempfahren);
+
+            alert(resultcelsi);
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Conversión de grados</h1>
+    <p>
+        Veremos la conversión de fahrenheit a celsius
+    </p>
+    <h2>Celsius a fahrenheit </h2>
+    <p>
+        Introduce lo necesario y presiona el botón para calcular fahrenheit
+    </p>
+
+    tempcelsius <input type="number" id="campoCelsius" />
+    <button onclick="ejecutarCalcfaren()">Calcular Fahrenheit</button>
+
+    <p>
+        Veremos la conversión de celsius a fahrenheit
+    </p>
+    <h2>fahrenheit a celsius </h2>
+    <p>
+        Introduce lo necesario y presiona el botón para calcular celsius
+    </p>
+
+    tempfahren <input type="number" id="campoFahren" />
+    <button onclick="ejecutarCalcelsius()">Calcular Celsius</button>
+
+</body>
+</html>

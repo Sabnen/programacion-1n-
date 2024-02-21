@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Pelea Dnd</title>
+    <script>
+        //Aqui va JS
+        var venom = {
+            nombre: "Venom el destructor",
+            hp:100,
+            atk:20,
+            def: 5,
+            exp:15,
+        }
+
+        var caballero = {
+            nombre: "Caballero real",
+            hp: 100,
+            atk: 10,
+            def: 15,
+            exp: 20,
+        }
+
+        var guerreraosc = {
+            nombre: "Guerrera Oscura",
+            hp: 100,
+            atk: 20,
+            def: 10,
+            exp: 10,
+        }
+
+        var xpContCaballe = 0;
+        var xpContGuerre = 0;
+        var expTot = 0;
+        var paraCaballe = 0;
+        var paraGuerre = 0;
+
+        var ultatacante;
+
+        function caballeroAtaca() {
+            ultatacante = 1;
+            venom.hp = ((venom.hp - caballero.atk) + venom.def);
+
+            if (venom.hp <= 0) {
+
+                alert("Venom ha sido destruido y el caballero real ha ganado " +
+                    caballero.exp + " puntos de experiencia y la Guerrera oscura ha ganado "
+                    + guerreraosc.exp +" puntos de experiencia");
+
+
+                xpContCaballe = (xpContCaballe + (caballero.atk - venom.def));
+                expTot = (xpContCaballe + xpContGuerre);
+                paraCaballe = (xpContCaballe / xpContGuerre);
+                paraGuerre = (xpContGuerre / xpContCaballe);
+
+                caballero.exp = (paraCaballe + venom.exp);
+                guerreraosc.exp = (paraGuerre + venom.exp);
+            }
+
+            else {
+                console.log("El caballero real ataca");
+                caballero.exp = caballero.exp + venom.exp;
+                console.log("Venom tiene " + venom.hp + " de vida");
+
+
+            }
+        }
+
+
+
+        function guerreraoscuraAtaca() {
+            venom.hp = ((venom.hp - guerreraosc.atk) + venom.def);
+            ultatacante = 2;
+
+            if (venom.hp <= 0) {
+
+                alert("Venom ha sido destruido y la guerrera oscura ha ganado "
+                    + guerreraosc.exp + " puntos de experiencia y el Caballero real ha ganado "
+                    + caballero.exp + " puntos de experiencia");
+
+                xpContGuerre = (xpContGuerre + (guerreraosc.atk - venom.def));
+                expTot = (xpContCaballe + xpContGuerre);
+                paraGuerre = (xpContGuerre / xpContCaballe);
+                paraCaballe = (xpContCaballe / xpContaGuerre);
+
+                caballero.exp = (paraCaballe + venom.exp);
+                guerreraosc.exp = (paraGuerre + venom.exp);
+
+
+
+            }
+
+            else {
+
+                console.log("La guerrera oscura ataca");
+                guerreraosc.exp = guerreraosc.exp + venom.exp;
+                console.log("Venom tiene " + venom.hp + " de vida");
+            }
+
+
+
+        }
+
+        function venomAtaca() {
+
+            if (ultatacante == 1) {
+
+                caballero.hp = ((caballero.hp + caballero.def) - venom.atk);
+                console.log("Venom lanza veneno");
+                console.log("El caballero ha recibido daño, ahora tiene " + caballero.hp + " de vida");
+            }
+            else if (ultatacante == 2) {
+
+                guerreraosc.hp = ((guerreraosc.hp + guerreraosc.def) - venom.atk);
+                console.log("Venom lanza veneno");
+                console.log("La guerrera oscura ha recibido daño, ahora tiene " + guerreraosc.hp + " de vida");
+            }
+
+        }
+
+    </script>
+
+    <style>
+        /*aqui va CSS*/
+
+        #calabozo {
+            position: relative;
+            width: 900px;
+            height: 600px;
+            background-image: url('IMGS/dungeonsimg/fondo.jpg');
+            background-size: cover;
+        }
+
+        .personaje {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #caballero {
+            left: 300px;
+            top: 200px;
+        }
+
+        #guerreraoscura {
+            right: 350px;
+            top: 190px;
+        }
+
+        #venom {
+            left: 370px;
+            bottom: 210px;
+            transform: rotate(180deg);
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <div id="calabozo">
+        <img id="caballero" class="personaje"
+             src="IMGS/dungeonsimg/4EzaTxj.png"
+             onclick="caballeroAtaca()" />
+
+        <img id="guerreraoscura" class="personaje"
+             src="IMGS/dungeonsimg/8aGTvk9.png"
+             onclick="guerreraoscuraAtaca()" />
+
+
+        <img id="venom" class="personaje"
+             src="IMGS/dungeonsimg/GMGFDFS.png"
+             onclick="venomAtaca()" />
+
+
+
+    </div>
+
+
+</body>
+</html>

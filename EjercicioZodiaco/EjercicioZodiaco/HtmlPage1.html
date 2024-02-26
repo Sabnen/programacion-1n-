@@ -1,0 +1,201 @@
+﻿<head>
+<style>
+    /*codigo CSS*/
+
+    h1 {
+        font-size: 24px; /* Tamaño de fuente para h1 */
+        font-family: Arial, sans-serif; /* Fuente para h1 */
+        font-style: italic; /* Fuente en cursiva para h1 */
+        color: white;
+    }
+
+    h3 {
+        font-size: 24px; /* Tamaño de fuente para h3 */
+        font-family: Arial, sans-serif; /* Fuente para h3 */
+        font-style: italic; /* Fuente en cursiva para h3 */
+        color: white;
+    }
+
+
+
+    body {
+        background-image: url('img/Zodiaco/gala.jpg');
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 120vh;
+        margin: 0;
+        background-size: contain;
+        position: relative
+    }
+
+    .label-contenido {
+        color: white;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
+    }
+
+        .label-contenido label {
+            margin-right: 10px;
+            width: 150px; /* Establece un ancho fijo para las etiquetas */
+            text-align: right; /* Alinea el texto a la derecha */
+        }
+
+        .label-contenido select {
+            width: 150px; /* Establece un ancho fijo para los selectores */
+        }
+
+            .label-contenido select:last-child {
+                margin-left: 10px; /* Agrega un margen izquierdo al último selector */
+            }
+
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+
+    #icono {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        background-color: transparent; /* Fondo transparente */
+        margin-top: 50px; /* Agrega un margen inferior para separar los elementos */
+    }
+
+
+    #nombreSigno, #descripSigno {
+        text-align: center;
+        color: white;
+    }
+</style>
+
+
+
+</head>
+<body>
+
+    <h1>El Horoscopo de Seya </h1>
+
+
+    <div class="label-contenido">
+        <label for="selectorDiaNac">Día de nacimiento</label>
+        <select id="selectorDiaNac">
+
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="1">6</option>
+            <option value="2">7</option>
+            <option value="3">8</option>
+            <option value="4">9</option>
+            <option value="5">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+
+        </select>
+    </div>
+
+
+    <div class="label-contenido">
+        <label for="selectorMesNac">Mes de nacimiento</label>
+        <select id="selectorMesNac">
+
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+    </div>
+
+    <button onclick="consultarHor()">
+        Consultar Horòscopo
+    </button>
+
+    <div class="info">
+
+        <img id="icono"
+             src="img/Zodiaco/interrog.png" />
+
+    </div>
+
+    <h2 id="nombreSigno"></h2>
+    <p id="descripSigno"></p>
+
+    <h3>Compatibilidad</h3>
+
+    <div class="label-contenido">
+        <label for="selectorZodiac">Selecciona tu signo</label>
+        <select id="selectorZodiac">
+            "
+            <option value="1">Capricornio</option>
+            <option value="2">Acuario</option>
+            <option value="3">Piscis</option>
+            <option value="4">Aries</option>
+            <option value="5">Tauro</option>
+            <option value="6">Geminis</option>
+            <option value="7">Cáncer</option>
+            <option value="8">Leo</option>
+            <option value="9">Virgo</option>
+            <option value="10">Libra</option>
+            <option value="11">Escorpio</option>
+            <option value="12">Sagitario</option>
+        </select>
+    </div>
+
+
+
+    <div class="label-contenido">
+        <label for="selectorZodiac">Selecciona su signo</label>
+        <select id="selectorsuZodiac">
+            <option value="1">Capricornio</option>
+            <option value="2">Acuario</option>
+            <option value="3">Piscis</option>
+            <option value="4">Aries</option>
+            <option value="5">Tauro</option>
+            <option value="6">Geminis</option>
+            <option value="7">Cáncer</option>
+            <option value="8">Leo</option>
+            <option value="9">Virgo</option>
+            <option value="10">Libra</option>
+            <option value="11">Escorpio</option>
+            <option value="12">Sagitario</option>
+        </select>
+    </div>
+
+</body>

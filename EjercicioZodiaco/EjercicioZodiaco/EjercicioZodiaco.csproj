@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ejercicio-Zodiaco.html" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="img\Zodiaco\acuario.jpg" />
     <Content Include="img\Zodiaco\aries.jpg" />
     <Content Include="img\Zodiaco\cancer.jpg" />

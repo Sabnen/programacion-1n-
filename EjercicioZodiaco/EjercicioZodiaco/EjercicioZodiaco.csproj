@@ -68,12 +68,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ejercicio-Zodiaco.html" />
+    <Content Include="img\Zodiaco\acuario.jpg" />
+    <Content Include="img\Zodiaco\aries.jpg" />
+    <Content Include="img\Zodiaco\cancer.jpg" />
     <Content Include="img\Zodiaco\capricornio.jpg" />
+    <Content Include="img\Zodiaco\capricornio1.jpg" />
     <Content Include="img\Zodiaco\escoprio.jpg" />
+    <Content Include="img\Zodiaco\escorpio.jpg" />
+    <Content Include="img\Zodiaco\geminis.jpg" />
     <Content Include="img\Zodiaco\indefinido.jpg" />
+    <Content Include="img\Zodiaco\interro.png" />
     <Content Include="img\Zodiaco\leo.jpg" />
+    <Content Include="img\Zodiaco\leo1.jpg" />
     <Content Include="img\Zodiaco\libra.jpg" />
+    <Content Include="img\Zodiaco\libra1.jpg" />
+    <Content Include="img\Zodiaco\piscis.jpg" />
     <Content Include="img\Zodiaco\sagitario.jpg" />
+    <Content Include="img\Zodiaco\sagitario1.jpg" />
+    <Content Include="img\Zodiaco\tauro.jpg" />
+    <Content Include="img\Zodiaco\virgo.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -11,12 +11,86 @@
 
             var valor = mes * 100 + dia;
 
-            console.log("Consultando fecha" + dia + "/" + mes+" = " + valor);
+            console.log("Consultando fecha" + dia + "/" + mes + " = " + valor);
 
 
 
-            if (valor > 923 && valor < 1022) {
-                icono.src = "img/zodiaco/libra.jpg";
+            if ((valor < 1223 && valor > 1231) || (valor >= 101 && valor <= 119)) {
+                icono.src = "img/zodiaco/capricornio1.jpg";
+                nombreSigno.innerHTML = "Capricornio";
+                descripSigno.innerHTML =
+                    "Los capricornios son personas muy leales";
+
+            }
+
+            else if (valor > 120 && valor < 218) {
+                icono.src = "img/zodiaco/acuario.jpg";
+                nombreSigno.innerHTML = "Acuario";
+                descripSigno.innerHTML =
+                    "Los acuarios son personas muy mentirosas";
+
+            }
+
+            else if (valor > 219 && valor < 320) {
+                icono.src = "img/zodiaco/piscis.jpg";
+                nombreSigno.innerHTML = "Piscis";
+                descripSigno.innerHTML =
+                    "Los piscis son personas muy flojas";
+
+            }
+
+            else if (valor > 321 && valor < 419) {
+                icono.src = "img/zodiaco/aries.jpg";
+                nombreSigno.innerHTML = "Aries";
+                descripSigno.innerHTML =
+                    "Los aries son personas muy creativos";
+
+            }
+
+            else if (valor > 420 && valor < 520) {
+                icono.src = "img/zodiaco/tauro.jpg";
+                nombreSigno.innerHTML = "Tauro";
+                descripSigno.innerHTML =
+                    "Los tauros son personas muy inteligentes";
+
+            }
+
+            else if (valor > 521 && valor < 620) {
+                icono.src = "img/zodiaco/geminis.jpg";
+                nombreSigno.innerHTML = "Geminis";
+                descripSigno.innerHTML =
+                    "Los geminis son personas muy malhumorados";
+
+            }
+
+            else if (valor > 621 && valor < 722) {
+                icono.src = "img/zodiaco/cancer.jpg";
+                nombreSigno.innerHTML = "Cáncer";
+                descripSigno.innerHTML =
+                    "Los cáncer son personas muy talentosas";
+
+            }
+
+            else if (valor > 723 && valor < 822) {
+                icono.src = "img/zodiaco/leo1.jpg";
+                nombreSigno.innerHTML = "Leo";
+                descripSigno.innerHTML =
+                    "Los leos son personas muy confiables";
+
+            }
+
+            else if (valor > 823 && valor < 922) {
+                icono.src = "img/zodiaco/virgo.jpg";
+                nombreSigno.innerHTML = "Virgo";
+                descripSigno.innerHTML =
+                    "Los virgos son personas muy analíticas";
+
+
+            }
+
+            else if (valor > 923 && valor < 1022) {
+
+                icono.src = "img/zodiaco/libra1.jpg";
                 nombreSigno.innerHTML = "Libra";
                 descripSigno.innerHTML =
                     "Los libras son personas muy balanceadas" +
@@ -25,33 +99,99 @@
             }
 
             else if (valor > 1023 && valor < 1121) {
-                icono.src = "img/zodiaco/escoprio.jpg";
+                icono.src = "img/zodiaco/escorpio.jpg";
                 nombreSigno.innerHTML = "Escorpio";
                 descripSigno.innerHTML =
-                    "Los escoprianos son personas muy irritantes";
+                    "Los escorpianos son personas muy irritantes";
 
             }
 
             else if (valor > 1122 && valor < 1221) {
-                icono.src = "img/zodiaco/sagitario.jpg";
+                icono.src = "img/zodiaco/sagitario1.jpg";
                 nombreSigno.innerHTML = "Sagitario";
                 descripSigno.innerHTML =
                     "Los sagitarios son personas muy nobles";
 
             }
 
-            else if (valor > 119 && valor < 1222) {
-                icono.src = "img/zodiaco/capricornio.jpg";
-                nombreSigno.innerHTML = "Capricornio";
-                descripSigno.innerHTML =
-                    "Los capricornios son personas muy leales";
-
-               
+          
 
 
-            }
+        }
+
+        function consultarCompati() {
+           
 
 
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <style>
+        /*codigo CSS*/
+
+        body {
+            background-color: #f3f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 110vh;
+            margin: 0;
+            background-size: contain;
+            position: relative
+        }
+
+        .label-contenido {
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; /* Agrega un margen inferior para separar los elementos */
+        }
+
+        .label-contenido label {
+            margin-right: 10px;
+            width: 150px; /* Establece un ancho fijo para las etiquetas */
+            text-align: right; /* Alinea el texto a la derecha */
+        }
+
+        .label-contenido select {
+            width: 150px; /* Establece un ancho fijo para los selectores */
+        }
+
+        .label-contenido select:last-child {
+            margin-left: 10px; /* Agrega un margen izquierdo al último selector */
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+
+        #icono {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: transparent; /* Fondo transparente */
+            margin-top: 20px; /* Agrega un margen inferior para separar los elementos */
+        }
+
+
+        #nombreSigno, #descripSigno {
+            text-align: center;
         }
 
 
@@ -66,75 +206,136 @@
 
 
 
+    </style>
 
-
-
-
-
-    </script>
 
 
 </head>
 <body>
-   <h1>El Horoscopo de Seya </h1>  
-    <label>Dìa de nacimineto </label>
-    <select id="selectorDiaNac">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="1">6</option>
-        <option value="2">7</option>
-        <option value="3">8</option>
-        <option value="4">9</option>
-        <option value="5">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-        <option value="16">16</option>
-        <option value="17">17</option>
-        <option value="18">18</option>
-        <option value="19">19</option>
-        <option value="20">20</option>
-        <option value="21">21</option>
-        <option value="22">22</option>
-        <option value="23">23</option>
-        <option value="24">24</option>
-        <option value="25">25</option>
-        <option value="26">26</option>
-        <option value="27">27</option>
-        <option value="28">28</option>
-        <option value="29">29</option>
-        <option value="30">30</option>
-        <option value="31">31</option>
-    </select>
 
-    <label>Mes de naciminento</label>
-    <select id="selectorMesNac">
-        <option value="1">Enero</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7"></option>
-        <option value="8">Agosto</option>
-        <option value="9">Septiembre</option>
-        <option value="10">Octubre</option>
-        <option value="11">Noviembre</option>
-        <option value="12">Diciembre</option>
-    </select>
+    <h1>El Horoscopo de Seya </h1>
+
+
+    <div class="label-contenido">
+        <label for="selectorDiaNac">Día de nacimiento</label>
+        <select id="selectorDiaNac">
+
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="1">6</option>
+            <option value="2">7</option>
+            <option value="3">8</option>
+            <option value="4">9</option>
+            <option value="5">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+
+        </select>
+    </div>
+
+
+    <div class="label-contenido">
+        <label for="selectorMesNac">Mes de nacimiento</label>
+        <select id="selectorMesNac">
+
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+    </div>
 
     <button onclick="consultarHor()">
         Consultar Horòscopo
     </button>
 
-    <img id="icono" src="img/Zodiaco/indefinido.jpg"/>
+    <div class="info">
+
+        <img id="icono"
+             src="img/Zodiaco/interro.png" />
+
+    </div>
+
     <h2 id="nombreSigno"></h2>
     <p id="descripSigno"></p>
+
+    <div class="label-contenido">
+        <label for="selectorZodiac">Selecciona tu signo</label>
+        <select id="selectorZodiac">
+            <option value="1">Capricornio</option>
+            <option value="2">Acuario</option>
+            <option value="3">Piscis</option>
+            <option value="4">Aries</option>
+            <option value="5">Tauro</option>
+            <option value="6">Geminis</option>
+            <option value="7">Cáncer</option>
+            <option value="8">Leo</option>
+            <option value="9">Virgo</option>
+            <option value="10">Libra</option>
+            <option value="11">Escorpio</option>
+            <option value="12">Sagitario</option>
+        </select>
+        </div>
+
+        <label>Selecciona su signo</label>
+        <select id="selectorsuZodiac">
+            <option value="1">Capricornio</option>
+            <option value="2">Acuario</option>
+            <option value="3">Piscis</option>
+            <option value="4">Aries</option>
+            <option value="5">Tauro</option>
+            <option value="6">Geminis</option>
+            <option value="7">Cáncer</option>
+            <option value="8">Leo</option>
+            <option value="9">Virgo</option>
+            <option value="10">Libra</option>
+            <option value="11">Escorpio</option>
+            <option value="12">Sagitario</option>
+        </select>
+
+
+        <button onclick="consultarCompatibilidad()">
+            Consultar compatibilidad
+        </button>
+
+
+
+
+
+
+
+
 
 </body>
 </html>

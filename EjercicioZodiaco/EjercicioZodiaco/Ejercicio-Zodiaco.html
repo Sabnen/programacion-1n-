@@ -119,6 +119,122 @@
 
         }
 
+
+        function checarCompatibilidad() {
+            var signo1 = document.getElementById("selectorZodiacal").value;
+            var signo2 = document.getElementById("zodiacalCompatible").value;
+            switch (signo1) {
+                case "capricornio":
+                    if (signo2 == "cancer" || signo2 == "tauro" || signo2 == "Virgo") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "acuario":
+                    if (signo2 == "aires" || signo2 == "geminis" || signo2 == "leo" || signo2 == "libra") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "piscis":
+                    if (signo2 == "aries" || signo2 == "tauro" || signo2 == "cancer" || signo2 == "virgo" || signo2 == "escorpio" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "aries":
+                    if (signo2 == "geminis" || signo2 == "leo" || signo2 == "libra" || signo2 == "sagitario" || signo2 == "acuario" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "tauro":
+                    if (signo2 == "tauro" || signo2 == "cancer" || signo2 == "Virgo" || signo2 == "escorpio" || signo2 == "capricornio" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "geminis":
+                    if (signo2 == "aries" || signo2 == "geminis" || signo2 == "libra" || signo2 == "sagitario" || signo2 == "acuario") {
+                        goodResult()
+                    } else {
+                        badResult()
+                    }
+                    break;
+
+                case "cancer":
+                    if (signo2 == "cancer" || signo2 == "tauro" || signo2 == "escorpio" || signo2 == "capricornio" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "leo":
+                    if (signo2 == "aries" || signo2 == "libra" || signo2 == "sagitario" || signo2 == "acuario") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "virgo":
+                    if (signo2 == "capricornio" || signo2 == "tauro" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "libra":
+                    if (signo2 == "aries" || signo2 == "geminis" || signo2 == "leo" || signo2 == "libra" || signo2 == "acuario") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "escorpio":
+                    if (signo2 == "tauro" || signo2 == "cancer" || signo2 == "escorpio" || signo2 == "piscis") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                case "sagitario":
+                    if (signo2 == "aries" || signo2 == "geminis" || signo2 == "leo") {
+                        goodResult();
+                    } else {
+                        badResult();
+                    }
+                    break;
+
+                default:
+                    console.log("Sorry!")
+            }
+        }
+       
+        
+        function goodResult() {
+            document.getElementById("resultadoCompatibilidad").innerHTML = "¡Fantástico!";
+            document.getElementById("descriptionResult").innerHTML = "¡Son altamente compatibles!";
+        }
+
+        function badResult() {
+            document.getElementById("resultadoCompatibilidad").innerHTML = "¡Oh no!";
+            document.getElementById("descriptionResult").innerHTML = "¡Esto no funcionará!";
+        }
         
 
     </script>
@@ -327,12 +443,23 @@
         </select>
     </div>
 
+    <div class="info2">
+        <h2 id="resultado"></h2>
+        <p id="descriptionResult"></p>
+    </div>
+
+
+
+
     <button onclick="consultarCompatibilidad()">
         Consultar compatibilidad
     </button>
-    <p id="resultadoCompatibilidad"></p>
+    <div class="info2">
+        <h2 id="resultado"></h2>
+        <p id="resultadoCompatibilidad"></p>
+    </div>
 
-    
+
 
 
 

@@ -75,9 +75,12 @@
     <Content Include="img\Zodiaco\capricornio1.jpg" />
     <Content Include="img\Zodiaco\escoprio.jpg" />
     <Content Include="img\Zodiaco\escorpio.jpg" />
+    <Content Include="img\Zodiaco\gala.jpg" />
+    <Content Include="img\Zodiaco\galaxia.jpg" />
     <Content Include="img\Zodiaco\geminis.jpg" />
     <Content Include="img\Zodiaco\indefinido.jpg" />
     <Content Include="img\Zodiaco\interro.png" />
+    <Content Include="img\Zodiaco\interrog.png" />
     <Content Include="img\Zodiaco\leo.jpg" />
     <Content Include="img\Zodiaco\leo1.jpg" />
     <Content Include="img\Zodiaco\libra.jpg" />

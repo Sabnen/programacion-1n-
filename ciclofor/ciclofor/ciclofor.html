@@ -43,8 +43,33 @@
     console.log("Calculo de area de circulo");
     for (var radio = 0; radio < 5; radio++) {
         var area = Math.PI * radio * radio;
-        console.log("El area del radio " + radio + "es:" + area);
+        console.log("El area del radio " + radio + "es: " + area);
     }
+
+    //ciclo con while//
+
+    console.log("Calculo de area de circulo usando while");       
+    var radio1 = 0;               //ya no se escribe una variable dentro del parentesis//
+    while (radio1 < 5) {
+        var area = Math.PI * radio1 * radio1;
+        console.log("El area del radio " + radio1 + "es: " + area);
+
+        radio1++;
+    }
+
+
+    //ciclo do while//
+    console.log("Calculo de area de circulo usando do while");
+    var radio2 = 0;        //siempre se debe colocare la variable afuera, ya que si se coloca dentro del bloque, la variable soloo existira dentro del bloque//
+    do {
+        var area = Math.PI * radio2 * radio2;
+        console.log("El area del radio " + radio2 + "es: " + area);
+
+        radio2++;
+    } while (radio2 < 5);
+    
+        
+    
 
 
    

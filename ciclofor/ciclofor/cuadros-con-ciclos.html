@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CuADROS CON CICLOS</title>
+
+
+
+
+    <style>
+        .cuadro {
+            width: 100px;
+            height: 100px;
+            background-color: darkseagreen;
+            box-shadow: 3px 3px 10px black;
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        function generarCuadros() {
+            var cantidad = campoCantidad.value;
+            var tamInicial = campoTamInit.value;
+            var factorCrec = campoFactor.value;
+
+            console.log("Generando " + cantidad + "cuadros con tam. inicial " + tamInicial + " y factor " + factorCrec)
+
+            //La condicion de este for no esta hardcodeada, viene de un parametro variable que es cantidad
+
+            for (var i = 1; i <= cantidad; i++) {
+                //Le solicitamos al documento que cree un nuevo elemento de tipo div
+                var cuadroNuevo = document.createElement("div");
+                //Le asigno la clase para aplicar el estilo visual
+                cuadroNuevo.className = "cuadro";
+
+                var ancho = tamInicial * i * factorCrec;
+                var alto = 30;
+
+                cuadroNuevo.style =
+                    "width: " + ancho + "px; height:" + alto + "px;";
+
+                //pego el nuevo div al cuerpo del doc
+                document.body.appendChild(cuadroNuevo);
+
+            }
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <h1> Generador de cuadros </h1>
+    <label>Cantidad a generar</label>
+    <input type="number" id="campoCantidad" /><br />
+
+    <label>Tamaño inicial</label>
+    <input type="number" id="campoTamInit" /><br />
+
+    <label>Factor de crecimiento</label>
+    <input type="number" id="campoFactor" step="any"/><br />
+
+    <button onclick="generarCuadros()">Generar</button>
+
+
+</body>
+</html>

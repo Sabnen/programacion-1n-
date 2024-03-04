@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicios de Arreglos y Listas</title>
+    <script>
+        function calcularCalif() {
+            return 1;
+
+        }
+
+
+        //Declaracion de arreglo
+        var calificaciones = [8, 7, 10, 9, 5, 9, 7, 6];
+        console.log("Tam lista califis: " + calificaciones.length);
+
+        console.log("El primer elemento es: " + calificaciones[0]);
+
+
+        /*   var ultimaCalif = calificaciones[4]; funciona, pero si se agregan mas, o quitanl, estaria mal porque no se actualiza.      El indice del ultimo elemento de un arreglo a arreglko.lenght-1
+*/
+
+        //formas de aceder/leer a los elementos
+
+        var ultimaCalif = calificaciones[calificaciones.length - 1];
+        console.log("El ultimo elemento es: " + ultimaCalif);
+
+        //formas de modificar elementos
+
+        calificaciones[4] = 10;
+        calificaciones[2] = 3 + 5;
+        calificaciones[1] = calificaciones[3];
+
+        var miCalif = 7;
+        calificaciones[4] = miCalif;
+        calificaciones[2] = calcularCalif();   //el resultado de la funcion, mas no se ejecuta la funcion
+
+
+
+        //esto muestra en la consola el contenido de la lista
+        console.log(calificaciones);
+
+
+        //Recorremos un arreglo usando ciclo for
+        for (var i = 0; i < calificaciones.length; i++) {
+            console.log("Pos " + i + "contiene" + calificaciones[i]);
+
+
+        }
+
+        function calcularPromedio(arreglo) {
+            var suma = 0;
+            for (var i = 0; i < arreglo.length; i++) {
+                suma += arreglo[i];
+
+            }
+            var prom = suma / arreglo.length;
+
+            return prom; 
+        }
+
+        var promCalifs = calcularPromedio(calificaciones);
+        console.log("Promedio de calificaciones: " + promCalifs);
+
+
+        var alturas = [1.7, 1.9, 1.69, 0.96]
+        console.log(alturas);
+
+        var promAlturas = calcularPromedio(alturas);
+        console.log("Prom de alturas: " + promAlturas)
+
+        console.log("Prom costos. " + calcularPromedio([19.99, 10.50, 34.0]));
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

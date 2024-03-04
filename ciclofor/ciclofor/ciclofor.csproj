@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="ciclofor.html" />
     <Content Include="cuadros-con-ciclos.html" />
+    <Content Include="Ejercicios-Arreglos-listas.html" />
     <Content Include="IMC.html" />
     <Content Include="Tablas.html" />
     <Content Include="Web.config" />

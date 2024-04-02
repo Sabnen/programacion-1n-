@@ -117,20 +117,34 @@
             },
         ];
 
+
         var indiceDialogo = 0;
         function leerSiguiente() {
             if (indiceDialogo < dialogo.length) {
                 var lineaDialogo = dialogo[indiceDialogo];
                 console.log(lineaDialogo.personaje + ": " + lineaDialogo.texto);
                 indiceDialogo++;
+                var itemDialogo = document.createElement("div");
+                itemDialogo.className = "contenedor-dialogo"
+                var labelPsj = document.createElement("label");
+                labelPsj.innerHTML = lineaDialogo.personaje + ": ";
+                var parrafoTexto = document.createElement("p");
+                parrafoTexto.innerHTML = lineaDialogo.texto
+                itemDialogo.appendChild(labelPsj);
+                itemDialogo.appendChild(parrafoTexto);
+                // Añadir el nuevo div al contenedor de diálogo
+                document.getElementById("contenedor-dialogo").appendChild(itemDialogo);
+                
+
+
             } else {
                 alert("Se ha llegado al final del dialogooo(¡¡muerte a la republica!!)")
                 return;
             }
         }
-            
 
-        
+
+
 
 
 
@@ -139,7 +153,50 @@
 
     </script>
 
+    <style>
+        #contenedor-dialogo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilo para los cuadros de diálogo */
+        .contenedor-dialogo {
+            margin-bottom: 10px;
+        }
 
+        .nombre-personaje {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        /* Estilo para el botón Continuar */
+        #boton-continuar {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 auto; /* Centra horizontalmente el botón */
+            display: block; /* Hace que el botón sea un bloque */
+        
+        }
+
+            #boton-continuar:hover {
+                background-color: #0056b3;
+            }
+    </style>
 
 
 
@@ -152,11 +209,8 @@
 
 <body>
     <div id="contenedor-dialogo">
-        <div 
 
-
-
-
+         <button onclick="leerSiguiente()">Continuar</button>
     </div>
 
 
@@ -166,11 +220,8 @@
 
 
 
-    <button onclick="leerSiguiente()"
-            type="button"
-            class="btn btn-primary">
-        Continuar
-    </button>
+   
+    
 
 
 

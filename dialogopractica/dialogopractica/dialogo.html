@@ -2,9 +2,180 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Dialogooo</title>
+    <script>
+        var dialogo = [
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Eso es algo que has hecho tú mismo"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "¡No vas a arrebatármela!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Tu ira, y tus ansias de poder ya lo han conseguido. Has permitido que ese Lord Tenebroso corrompa tu mente y ahora…ahora te has convertido en lo que precisamente juraste destruir."
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "Ahórrate el sermón, Obi-Wan. Conozco todas las mentiras de los jedi. No tengo miedo al Lado Oscuro como tú. ¡He traído la paz, la libertad, la justicia… y la seguridad a mi nuevo Imperio!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "¿Tu nuevo Imperio?"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "No me obligues a matarte"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Anakin, yo le debo lealtad a la República, ¡a la Democracia!"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "Si no estás conmigo, eres mi enemigo"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Sólo un sith es tan extremista. Cumpliré con mi deber"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "Lo intentarás…"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Te he fallado, Anakin, te he fallado."
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "¡Debí intuir que los jedi intentarían hacerse con el poder!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "¡Anakin, el Canciller Palpatine es el mal!"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "¡Desde mi punto de vista, los jedi son el mal!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "¡Ya estás perdido!"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "Éste es tu final, mi Maestro"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "¡Se acabó, Anakin, la altura me da ventaja!"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "¡No oses despreciar mi poder!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "No lo intentes..."
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: ":¡Tú eras el Elegido! ¡El que destruiría los sith, no el que se uniría a ellos! ¡El que vendría a traer el equilibrio a la Fuerza, no a hundirla en la Oscuridad!"
+            },
+            {
+                personaje: "Anakin",
+                color: "#9E5D3E",
+                texto: "¡¡TE ODIOOOO!!"
+            },
+            {
+                personaje: "Obi-wan",
+                color: "#2DE0D1",
+                texto: "Tú eras mi hermano, Anakin. Yo te quería"
+            },
+        ];
+
+        var indiceDialogo = 0;
+        function leerSiguiente() {
+            if (indiceDialogo < dialogo.length) {
+                var lineaDialogo = dialogo[indiceDialogo];
+                console.log(lineaDialogo.personaje + ": " + lineaDialogo.texto);
+                indiceDialogo++;
+            } else {
+                alert("Se ha llegado al final del dialogooo(¡¡muerte a la republica!!)")
+                return;
+            }
+        }
+            
+
+        
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
 </head>
+
+
 <body>
+    <div id="contenedor-dialogo">
+        <div 
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <button onclick="leerSiguiente()"
+            type="button"
+            class="btn btn-primary">
+        Continuar
+    </button>
+
+
+
+
+
 
 </body>
 </html>

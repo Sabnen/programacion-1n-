@@ -13,6 +13,7 @@
             background-color: #f5f5f5;
             border: 10px solid #AEB9EB;
             border-radius: 10px;
+            position: relative; /* Agrega posición relativa para el posicionamiento del botón */
         }
 
         /* Estilo para los cuadros de diálogo */
@@ -32,36 +33,29 @@
         /* Estilo para los textos del diálogo */
         .texto-dialogo {
             margin-bottom: 10px;
-            
         }
-
 
         /* Estilo para el botón Continuar */
         #boton-continuar {
+            position: absolute; /* Posicionamiento absoluto para que se mantenga fijo */
+            bottom: 20px; /* Ajustar según sea necesario */
+            left: 50%; /* Centrar horizontalmente */
+            transform: translateX(-50%); /* Centrar horizontalmente */
+            z-index: 999;
             width: 200px;
-            padding: 10px;
-            border: 5px;
+            padding: 6px;
+            margin-bottom: 7px;
             border-radius: 5px;
             background-color: #007bff;
             color: white;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
-            transform: translate(50%,60%); /* Centrado horizontal */
-            margin: 13px;
-            bottom: 46px;
-
-            position: absolute
-         
         }
 
             #boton-continuar:hover {
                 background-color: #0056b3;
-              
             }
-
-        
-
     </style>
 
     <script>
@@ -184,6 +178,7 @@
 
 
         var indiceDialogo = 0;
+
         function leerSiguiente() {
             if (indiceDialogo < dialogo.length) {
                 var lineaDialogo = dialogo[indiceDialogo];
@@ -201,56 +196,28 @@
                 // Añadir el nuevo div al contenedor de diálogo
                 document.getElementById("contenedor-dialogo").appendChild(itemDialogo);
 
-
-
+                // Actualizar la posición del botón "Continuar"
+                actualizarPosicionBoton();
             } else {
                 alert("Se ha llegado al final del dialogooo(¡¡muerte a la republica!!)")
                 return;
             }
         }
 
+        function actualizarPosicionBoton() {
+            var contenedor = document.getElementById("contenedor-dialogo");
+            var boton = document.getElementById("boton-continuar");
+            boton.style.top = contenedor.scrollTop + contenedor.clientHeight - boton.clientHeight + "px";
+        }
 
-
-
-
-
-
-
-
+        // Llamar a la función para asegurarse de que el botón esté en la posición correcta inicialmente
+        actualizarPosicionBoton();
     </script>
-
-
-
-
-
-
-
-
 </head>
-
-
 <body>
     <div id="contenedor-dialogo">
+        <!-- Botón Continuar -->
         <button id="boton-continuar" onclick="leerSiguiente()">Continuar</button>
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

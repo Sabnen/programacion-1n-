@@ -4,7 +4,32 @@
     <meta charset="utf-8" />
     <title>Dialogooo</title>
     <style>
-        #contenedor-dialogo {
+        body{
+            background-color:#ECCA9C;
+
+        }
+
+        #contenedorDialogo {
+            border: 1px solid #AFD198;
+            background-color: #E8EFCF;
+            max-width:300px;
+            margin:0 auto;
+        }
+
+        .lineaDialogo {
+            border: 1px solid #DB4979;
+            margin:5px;
+            padding:3px;
+            border-radius:
+
+        }
+
+
+
+
+
+
+        #contenedorDialogo {
             justify-content:center;
             position:center;
             border-style:dashed;
@@ -15,50 +40,7 @@
             padding: 20px;
             margin: 50px auto; /* Centra el cuadro en la página */
             background-color: #f5f5f5;
-            border: 10px solid #AEB9EB;
-            border-radius: 10px;
-        }
-
-        /* Estilo para los cuadros de diálogo */
-        .contenedor-dialogo {
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            border: 2px solid #000000;
-        }
-
-        /* Estilo para los nombres de personajes */
-        .nombre-personaje {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        /* Estilo para los textos del diálogo */
-        .texto-dialogo {
-            margin-bottom: 10px;
-        }
-
-
-        /* Estilo para el botón Continuar */
-        #boton-continuar {
-            width: 200px;
-            padding: 10px;
-            border: none;
-            border-radius: 15px;
-            background-color: #007bff;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            transform: translate(50%,60%); /* Centrado horizontal */
-            margin: 13px;
-            bottom: 46px;
-            position: absolute
-        }
-
-            #boton-continuar:hover {
-                background-color: #0056b3;
-            }
+            border: 10px solid;
     </style>
 
     <script>
@@ -186,17 +168,18 @@
                 var lineaDialogo = dialogo[indiceDialogo];
                 console.log(lineaDialogo.personaje + ": " + lineaDialogo.texto);
                 indiceDialogo++;
-                var itemDialogo = document.createElement("div");
-                itemDialogo.className = "contenedor-dialogo"
+                var nuevoDialogo = document.createElement("div");
+                nuevoDialogo.className = itemDialogo;
                 var labelPsj = document.createElement("label");
                 labelPsj.innerHTML = lineaDialogo.personaje + ": ";
                 var parrafoTexto = document.createElement("p");
-                parrafoTexto.innerHTML = lineaDialogo.texto
-                itemDialogo.style.backgroundColor = lineaDialogo.color;
-                itemDialogo.appendChild(labelPsj);
-                itemDialogo.appendChild(parrafoTexto);
+                parrafoTexto.innerHTML = lineaDialogo.texto;
+                nuevoDialogo.style.backgroundColor = lineaDialogo.color;
+                
                 // Añadir el nuevo div al contenedor de diálogo
-                document.getElementById("contenedor-dialogo").appendChild(itemDialogo);
+                contenedorDialogo.appendChild(nuevoDialogo);
+
+                indiceDialogo++;
 
 
 
@@ -227,8 +210,9 @@
 
 
 <body>
-    <div id="contenedor-dialogo">
-        <button id="boton-continuar" onclick="leerSiguiente()">Continuar</button>
+    <div id="contenedorDialogo">
+        <button id="botonContinuar" onclick="leerSiguiente()">Continuar</button>    
+
 
 
     </div>

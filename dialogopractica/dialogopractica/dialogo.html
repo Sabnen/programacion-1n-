@@ -13,27 +13,32 @@
             background-color: #f5f5f5;
             border: 10px solid #AEB9EB;
             border-radius: 10px;
+       
         }
 
-        /* Estilo para los cuadros de diálogo */
+       
+
+
         .contenedor-dialogo {
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 2px solid #000000;
+            position: relative;
         }
 
-        /* Estilo para los nombres de personajes */
-        .nombre-personaje {
-            font-weight: bold;
-            margin-bottom: 5px;
+        img {
+            width:40px;
+            height:40px;
+            position:absolute;
+            left:-10px;
+            border-radius:50px;
+            margin:1px;
+            top:-15px;
         }
 
-        /* Estilo para los textos del diálogo */
-        .texto-dialogo {
-            margin-bottom: 10px;
-            
-        }
+
+        
 
 
         /* Estilo para el botón Continuar */
@@ -47,10 +52,9 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
-            transform: translate(50%,60%); /* Centrado horizontal */
             margin: 13px;
             bottom: 46px;
-
+            left:15px;
             position: absolute
          
         }
@@ -60,7 +64,7 @@
               
             }
 
-        
+
 
     </style>
 
@@ -73,112 +77,134 @@
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Eso es algo que has hecho tú mismo"
+                texto: "Eso es algo que has hecho tú mismo",
+                imagen:"imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "¡No vas a arrebatármela!"
+                texto: "¡No vas a arrebatármela!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Tu ira, y tus ansias de poder ya lo han conseguido. Has permitido que ese Lord Tenebroso corrompa tu mente y ahora…ahora te has convertido en lo que precisamente juraste destruir."
+                texto: "Tu ira, y tus ansias de poder ya lo han conseguido. Has permitido que ese Lord Tenebroso corrompa tu mente y ahora…ahora te has convertido en lo que precisamente juraste destruir.",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "Ahórrate el sermón, Obi-Wan. Conozco todas las mentiras de los jedi. No tengo miedo al Lado Oscuro como tú. ¡He traído la paz, la libertad, la justicia… y la seguridad a mi nuevo Imperio!"
+                texto: "Ahórrate el sermón, Obi-Wan. Conozco todas las mentiras de los jedi. No tengo miedo al Lado Oscuro como tú. ¡He traído la paz, la libertad, la justicia… y la seguridad a mi nuevo Imperio!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "¿Tu nuevo Imperio?"
+                texto: "¿Tu nuevo Imperio?",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "No me obligues a matarte"
+                texto: "No me obligues a matarte",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Anakin, yo le debo lealtad a la República, ¡a la Democracia!"
+                texto: "Anakin, yo le debo lealtad a la República, ¡a la Democracia!",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "Si no estás conmigo, eres mi enemigo"
+                texto: "Si no estás conmigo, eres mi enemigo",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Sólo un sith es tan extremista. Cumpliré con mi deber"
+                texto: "Sólo un sith es tan extremista. Cumpliré con mi deber",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "Lo intentarás…"
+                texto: "Lo intentarás…",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Te he fallado, Anakin, te he fallado."
+                texto: "Te he fallado, Anakin, te he fallado.",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "¡Debí intuir que los jedi intentarían hacerse con el poder!"
+                texto: "¡Debí intuir que los jedi intentarían hacerse con el poder!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "¡Anakin, el Canciller Palpatine es el mal!"
+                texto: "¡Anakin, el Canciller Palpatine es el mal!",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "¡Desde mi punto de vista, los jedi son el mal!"
+                texto: "¡Desde mi punto de vista, los jedi son el mal!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "¡Ya estás perdido!"
+                texto: "¡Ya estás perdido!",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "Éste es tu final, mi Maestro"
+                texto: "Éste es tu final, mi Maestro",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "¡Se acabó, Anakin, la altura me da ventaja!"
+                texto: "¡Se acabó, Anakin, la altura me da ventaja!",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "¡No oses despreciar mi poder!"
+                texto: "¡No oses despreciar mi poder!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "No lo intentes..."
+                texto: "No lo intentes...",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: ":¡Tú eras el Elegido! ¡El que destruiría los sith, no el que se uniría a ellos! ¡El que vendría a traer el equilibrio a la Fuerza, no a hundirla en la Oscuridad!"
+                texto: ":¡Tú eras el Elegido! ¡El que destruiría los sith, no el que se uniría a ellos! ¡El que vendría a traer el equilibrio a la Fuerza, no a hundirla en la Oscuridad!",
+                imagen: "imagenes/obi.png",
             },
             {
                 personaje: "Anakin",
                 color: "#D4D1EB",
-                texto: "¡¡TE ODIOOOO!!"
+                texto: "¡¡TE ODIOOOO!!",
+                imagen: "imagenes/anakin.png",
             },
             {
                 personaje: "Obi-wan",
                 color: "#AEDFEB",
-                texto: "Tú eras mi hermano, Anakin. Yo te quería"
+                texto: "Tú eras mi hermano, Anakin. Yo te quería",
+                imagen: "imagenes/obi.png",
             },
         ];
 
@@ -188,19 +214,26 @@
             if (indiceDialogo < dialogo.length) {
                 var lineaDialogo = dialogo[indiceDialogo];
                 console.log(lineaDialogo.personaje + ": " + lineaDialogo.texto);
-                indiceDialogo++;
                 var itemDialogo = document.createElement("div");
-                itemDialogo.className = "contenedor-dialogo"
+                itemDialogo.className = "contenedor-dialogo";
                 var labelPsj = document.createElement("label");
                 labelPsj.innerHTML = lineaDialogo.personaje + ": ";
                 var parrafoTexto = document.createElement("p");
                 parrafoTexto.innerHTML = lineaDialogo.texto
+
                 itemDialogo.style.backgroundColor = lineaDialogo.color;
                 itemDialogo.appendChild(labelPsj);
                 itemDialogo.appendChild(parrafoTexto);
+
+                var imagen = document.createElement("img");
+                imagen.src = lineaDialogo.imagen
+
+                itemDialogo.appendChild(imagen);
+
                 // Añadir el nuevo div al contenedor de diálogo
                 document.getElementById("contenedor-dialogo").appendChild(itemDialogo);
 
+                indiceDialogo++;
 
 
             } else {
@@ -231,7 +264,7 @@
 
 <body>
     <center>
-        <div id="conten</center>edor-dialogo">
+        <div id="contenedor-dialogo">
             <button id="boton-continuar" onclick="leerSiguiente()">Continuar</button>
 
 

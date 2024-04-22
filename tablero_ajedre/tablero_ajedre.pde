@@ -6,7 +6,7 @@ for (int i = 0; i <= 500; i++) {
     if ((j+i) % 2 == 0) {
       fill(#000000);
     } else {
-      fill(#8AFFFB);
+      fill(#F6F5F2);
     }
     square(i * 100, j * 100, 100);
   }

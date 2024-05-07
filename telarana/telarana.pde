@@ -23,8 +23,11 @@ for(int i=1 ;i<=5 ; i++){
   
 line(x,centroY, xInterm,yInterm);
 line(xInterm, yInterm, centroX, y);
-line(centroX,y,centroX-56*i, centroY+56*i);
+line(centroX,y,centroX-sep45grados*i, centroY+56*i);
 line(centroX-sep45grados*i, centroY+sep45grados*i, centroX-separacion*i, centroY);
-line(centroX-separacion*i, centroY, centroX-56*i,centroY-56*i); 
-line(centroX-56*i,centroY-56*i, centroX+56*i,centroY);
+line(centroX-separacion*i, centroY, centroX-sep45grados*i,centroY-sep45grados*i); 
+line(centroX-sep45grados*i,centroY-sep45grados*i, centroX,centroY-separacion*i);
+line(centroX, centroY-separacion*i, centroX+sep45grados*i,centroY-sep45grados*i);
+line( centroX + sep45grados * i, centroY - sep45grados * i, centroX + separacion *i, centroY );
+
 }
